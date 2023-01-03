@@ -37,20 +37,22 @@
                     </div>
                     <ul class="setting__left-box">
                         <li class="setting__left-menu active">
-                            <span class="material-symbols-outlined menu-icon">sync_saved_locally</span>
-                            <span class="menu-item">System</span>
+                            <span class="material-symbols-outlined">
+                                receipt_long
+                            </span>
+                            <span class="menu-item">Aplikasi Kasir</span>
                         </li>
                         <li class="setting__left-menu">
                             <span class="material-symbols-outlined">
-                                routine
+                                backup_table
                             </span>
-                            <span class="menu-item">Bluetooth & devices</span>
+                            <span class="menu-item">Setting Table</span>
                         </li>
                         <li class="setting__left-menu">
                             <span class="material-symbols-outlined">
-                                stethoscope_arrow
+                                location_away
                             </span>
-                            <span class="menu-item">Accounts</span>
+                            <span class="menu-item">Profil Usaha</span>
                         </li>
                         <li class="setting__left-menu">
                             <span class="material-symbols-outlined">
@@ -118,7 +120,7 @@
                         </li>
                     </ul>
                 </aside>
-                <div class="modal__setting-right" id="settingBody">
+                <div class="modal__setting-right" id="modalSettingBody">
                     <div class="setting__right-header">
                         <h2 class="setting__right-title">System</h2>
                     </div>
@@ -300,10 +302,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="setting__right-footer">
-                        <a class="btn danger">Cancel</a>
-                        <a class="btn">Save Changes</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -311,3 +309,126 @@
 </body>
 
 </html>
+
+<script>
+    // async function modalSetting() {
+    //                 let dom = rendElm({
+    //                     elm: [{
+    //                         elm: "section",
+    //                         cls: "modal__container",
+    //                         elms: [{
+    //                             elm: "div",
+    //                             cls: "modal__body",
+    //                             elms: [{
+    //                                 elm: "div",
+    //                                 cls: "modal__body-header",
+    //                                 elms: [{
+    //                                     elm: "div",
+    //                                     cls: "modal-close-btn",
+    //                                     text: "x"
+    //                                 }]
+    //                             }, {
+    //                                 elm: "div",
+    //                                 cls: "modal__body-main modal__setting",
+    //                                 elms: [{
+    //                                     elm: "aside",
+    //                                     cls: "modal__setting-left",
+    //                                     elms: [{
+    //                                         elm: "div",
+    //                                         cls: "user__profile",
+    //                                         elms: [{
+    //                                             elm: "div",
+    //                                             cls: "user__profile-picture",
+    //                                             elms: [{
+    //                                                 elm: "img",
+    //                                                 src: "masukkangambarprofile"
+    //                                             }]
+    //                                         }, {
+    //                                             elm: "div",
+    //                                             cls: "user__profile-info",
+    //                                             elms: [{
+    //                                                 elm: "p",
+    //                                                 elms: [{
+    //                                                     elm: "b",
+    //                                                     text: "Masukkan Nama User"
+    //                                                 }]
+    //                                             }, {
+    //                                                 elm: "p",
+    //                                                 text: "masukkanemailuser@gmail.com"
+    //                                             }]
+    //                                         }]
+    //                                     }, {
+    //                                         elm: "ul",
+    //                                         cls: "setting__left-box",
+    //                                         elms: [{
+    //                                             elm: "li",
+    //                                             cls: "setting__left-menu",
+    //                                             elms: [{
+    //                                                 elm: "span",
+    //                                                 cls: "material-symbols-outlined",
+    //                                                 text: "masukkan emot icon"
+    //                                             }, {
+    //                                                 elm: "span",
+    //                                                 cls: "menu-item",
+    //                                                 text: "Masukkan Nama Menu"
+    //                                             }]
+    //                                         }]
+    //                                     }]
+    //                                 }, {
+    //                                     elm: "div",
+    //                                     cls: "modal__setting-right",
+    //                                     id: "modalSettingBody",
+    //                                     elms: [{
+    //                                         elm: "div",
+    //                                         cls: "setting__right-header",
+    //                                         elms: [{
+    //                                             elm: "h2",
+    //                                             cls: "setting__right-title",
+    //                                             text: "Masukkan Judul Menu"
+    //                                         }]
+    //                                     }, {
+    //                                         elm: "div",
+    //                                         cls: "setting__right-body",
+    //                                         elms: [{
+    //                                             elm: "div",
+    //                                             cls: "setting__right-group",
+    //                                             elms: [{
+    //                                                 elm: "h3",
+    //                                                 cls: "setting__right-subtitle",
+    //                                                 text: "masukkan nama subjudul"
+    //                                             }, {
+    //                                                 elm: "div",
+    //                                                 cls: "setting__right-box",
+    //                                                 elms: [{
+    //                                                     elm: "div",
+    //                                                     cls: "right__box-menu",
+    //                                                     elms: [{
+    //                                                         elm: "span",
+    //                                                         cls: "material-symbols-outlined",
+    //                                                         text: "masukkan emot icon",
+    //                                                     }, {
+    //                                                         elm: "div",
+    //                                                         elms: [{
+    //                                                             elm: "h4",
+    //                                                             text: "masukkan nama menu"
+    //                                                         }, {
+    //                                                             elm: "h4",
+    //                                                             cls: "text-muted",
+    //                                                             text: "masukkan deskripsi menu"
+    //                                                         }]
+    //                                                     }]
+    //                                                 }, {
+    //                                                     elm: "span",
+    //                                                     cls: "material-symbols-outlined",
+    //                                                     text: "chevron_right"
+    //                                                 }]
+    //                                             }]
+    //                                         }]
+    //                                     }]
+    //                                 }]
+    //                             }]
+    //                         }]
+    //                     }]
+    //                 })
+    //             }
+</script>
