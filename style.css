@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }  
+
+:root {
+    /* ROOT COLOR */
+    --color-primary: hsla(217, 60%, 50%, 1);
+    --color-primary-hover: hsl(217, 60%, 80%);
+    --color-red: hsla(348, 85%, 45%, 1);
+    --color-red-hover: hsla(348, 85%, 75%, 1);
+    --color-green: hsla(157, 85%, 40%, 1);
+    --color-green-hover: hsla(157, 85%, 75%, 1);
+    --color-warning: hsla(45, 85%, 55%, 1);
+    --color-warning-hover: hsla(45, 85%, 88%, 1);
+    --color-purple: hsla(255, 55%, 75%);
+  
+    /* Warna Light dan Dark Mode */
+    --color-primary-link: hsla(217, 60%, 50%, 1);
+    --color-white: hsla(0, 0%, 100%, 1);
+    --color-white-variant: hsla(216, 44%, 95%, 1);
+    --color-info-light: hsl(216, 44%, 88%);
+    --color-dark: hsla(216, 22%, 30%, 1);
+    --color-dark-variant: hsla(216, 22%, 45%, 1);
+    --color-info-dark: hsla(216, 22%, 65%, 1);
+    /* Warna Swiper Btn */
+    --swiper-theme-color: hsl(211, 100%, 50%);
+    
+    /* ROOT Border Radius */
+    --modal-border-radius:1rem;
+  
+    --card-padding: 1.8rem;
+    --circle-border-radius: 50%;
+  
+    --transition: all 300ms ease;
+  }
+
+.user__profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.modal__setting {
+    display: grid;
+    grid-template-columns: 17rem auto;
+    text-align: left;
+    gap: 0.5rem;
+  }
+  
+  .modal__setting-sidebar .setting-btn {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .modal__container {
+    background: rgba(255, 255, 255, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    font-size: 0.9rem;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    text-align: center;
+    place-items: center;
+    display: grid;
+  }
+  
+  .modal__container .modal__body {
+    background: hsla(0, 0%, 100%, 1);
+    padding: 3rem;
+    width: 60%;
+    position: absolute;
+    box-shadow: 0 0 1rem hsla(217, 60%, 50%, 1);
+    top: 10rem;
+    overflow: hidden;
+    border-radius: var(--modal-border-radius);
+    transition: var(--transition);
+  }
+  
+  .modal__body .modal__body-header {
+    font-size: 1.5rem;
+  }
+  
+  .modal__body-title {
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .modal__body-header .modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  .modal__body-main {
+    margin-bottom: 1rem;
+  }
+  
+  .modal__setting-footer {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: var(--circle-border-radius);
+    overflow: hidden;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+  
